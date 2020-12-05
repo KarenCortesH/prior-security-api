@@ -1,0 +1,40 @@
+{
+  "name": "prior-security-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index",
+    "start:win:local": "set NODE_ENV=local && nodemon ./index",
+    "start:win:pro:local": "set NODE_ENV=production.local && nodemon ./index",
+    "lint": "eslint . --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.12.1",
+    "eslint-config-standard": "^15.0.0",
+    "nodemon": "^2.0.6",
+    "standard": "^15.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "handlebars": "4.7.6",
+    "joi": "^17.2.1",
+    "knex": "^0.21.6",
+    "mjml": "4.7.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "nodemailer": "6.4.16",
+    "path": "^0.12.7",
+    "pg": "^8.5.1",
+    "strong-error-handler": "^4.0.0"
+  }
+}

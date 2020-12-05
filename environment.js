@@ -49,7 +49,10 @@ const environment = {
   SMTP_USER: process.env.SMTP_USER,
   SMTP_PW: process.env.SMTP_PW,
   /* GENERAL */
-  FROM_EMAIL: process.env.FROM_EMAIL
+  FROM_EMAIL: process.env.FROM_EMAIL,
+  /* TWILIO */
+  TWILIO_ACCOUNT_SID: process.env.TWILIO_ACCOUNT_SID,
+  TWILIO_AUTH_TOKEN: process.env.TWILIO_AUTH_TOKEN
 };
 
 module.exports = environment;

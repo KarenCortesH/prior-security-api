@@ -6,6 +6,7 @@ const { HttpException } = require('../common/http-exception');
 const { getTokenFromHeaders } = require('../utils');
 const { generateHtmlByTemplate } = require('../templates');
 const { mailer } = require('../mailer');
+const { twilio } = require('../twilio');
 
 const { createSchema } = require('../schemas/alerts.schemas');
 const environment = require('../environment');
@@ -52,8 +53,6 @@ router.post('/', async (req, res, next) => {
 
     const { rows: result } = await database.executeSQL(countAlertsSQL, { user_id: body.user_id });
 
-    console.log('result', result);
-
     const alertsCount = result[0].alerts_count;
 
     if (alertsCount >= 5) {
@@ -90,6 +89,9 @@ router.post('/', async (req, res, next) => {
       `${user.full_name} te necesita!`,
       'Alerta de prior security'
     );
+
+    twilio.sendMessage(`${user.full_name} te necesita, ponte en contacto por favor!`, `+57${user.phone}`)
+      .catch(error => console.error('error sending the SMS', error));
 
     // creo la alerta
     await database.createOne('alerts', {

@@ -58,16 +58,11 @@ class Database {
       .orderBy('id', 'desc')
       .limit(1);
 
-    try {
-      const data = await query;
+    const data = await query;
 
-      if (!data.length) return null;
-  
-      return data[0];
-    } catch (error) {
-      console.log(error);
-      throw error;
-    }
+    if (!data.length) return null;
+
+    return data[0];
   }
 
   async getAll (

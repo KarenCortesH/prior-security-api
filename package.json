@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./index",
+    "start:lin:local": "cross-env NODE_ENV=local nodemon ./index",
     "start:win:local": "set NODE_ENV=local && nodemon ./index",
+    "start:lin:pro:local": "cross-env NODE_ENV=production.local nodemon ./index",
     "start:win:pro:local": "set NODE_ENV=production.local && nodemon ./index",
     "lint": "eslint . --fix"
   },

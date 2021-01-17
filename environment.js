@@ -3,7 +3,7 @@ const path = require('path');
 
 const NODE_ENV = process.env.NODE_ENV ? process.env.NODE_ENV.trim() : 'local';
 
-// console.log(`node_env ${NODE_ENV}.`);
+// console.log(`node_env ${NODE_ENV}`);
 
 let envPath;
 switch (NODE_ENV.trim()) {

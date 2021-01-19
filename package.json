@@ -16,10 +16,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^7.12.1",
-    "eslint-config-standard": "^15.0.0",
-    "nodemon": "^2.0.6",
-    "standard": "^15.0.0"
+    "eslint": "7.12.1",
+    "eslint-config-standard": "15.0.0",
+    "nodemon": "2.0.6",
+    "standard": "15.0.0"
   },
   "dependencies": {
     "axios": "^0.20.0",

@@ -19,7 +19,7 @@
     "eslint": "7.18.0",
     "eslint-config-standard": "15.0.1",
     "nodemon": "2.0.7",
-    "standard": "15.0.0"
+    "standard": "15.0.1"
   },
   "dependencies": {
     "axios": "^0.21.0",

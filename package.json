@@ -16,13 +16,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^7.12.1",
-    "eslint-config-standard": "^15.0.0",
-    "nodemon": "^2.0.6",
-    "standard": "^15.0.0"
+    "eslint": "7.18.0",
+    "eslint-config-standard": "15.0.1",
+    "nodemon": "2.0.7",
+    "standard": "15.0.1"
   },
   "dependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.21.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "cross-env": "^7.0.2",

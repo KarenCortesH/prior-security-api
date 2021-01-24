@@ -52,7 +52,9 @@ const environment = {
   FROM_EMAIL: process.env.FROM_EMAIL,
   /* TWILIO */
   TWILIO_ACCOUNT_SID: process.env.TWILIO_ACCOUNT_SID,
-  TWILIO_AUTH_TOKEN: process.env.TWILIO_AUTH_TOKEN
+  TWILIO_AUTH_TOKEN: process.env.TWILIO_AUTH_TOKEN,
+  /* FRONT */
+  FRONT_BASE_URL: process.env.FRONT_BASE_URL
 };
 
 module.exports = environment;

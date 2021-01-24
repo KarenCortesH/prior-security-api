@@ -9,6 +9,7 @@ const { mailer } = require('../mailer');
 const { twilio } = require('../twilio');
 
 const { createSchema } = require('../schemas/alerts.schemas');
+
 const environment = require('../environment');
 
 const router = express.Router();
@@ -76,7 +77,8 @@ router.post('/', async (req, res, next) => {
       'emit-alert',
       {
         userName: user.full_name,
-        contactName: contact.full_name
+        contactName: contact.full_name,
+        link: environment.FRONT_BASE_URL + `view-alert?longitude=${body.longitude}&latitude=${body.latitude}&name=${user.full_name}`
       }
     );
 
@@ -98,7 +100,9 @@ router.post('/', async (req, res, next) => {
       email_sent: true,
       sms_sent: true,
       expiration: new Date(),
-      user_id: body.user_id
+      user_id: body.user_id,
+      longitude: body.longitude,
+      latitude: body.latitude
     });
 
     return res.status(201).send({ message: 'ok' });

@@ -31,15 +31,12 @@ l<mjml>
       </mj-column>
     </mj-section>
 
-    <!--
     <mj-section background-color="#FFF" padding-top="0">
       <mj-column>
         <mj-button background-color="#1C69D3" color="white" href="{{link}}">
-          Ver donde se encuentra
+          Ver alerta
         </mj-button>
       </mj-column>
-    </mj-section>
-    -->
 
 
     <mj-include path='./templates/emails/shared/footer.mjml'></mj-include>

@@ -40,7 +40,7 @@ router.post('/', async (req, res, next) => {
     const existingByPhone = await database.getOne('users', { phone: body.phone });
 
     if (existingByPhone) {
-      throw HttpException(412, `ya existe un usuario con el telefono ${body.phone}.`);
+      throw new HttpException(412, `ya existe un usuario con el telefono ${body.phone}.`);
     }
 
     // creo el usuario en el ACL
